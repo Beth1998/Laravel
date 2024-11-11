@@ -6,6 +6,8 @@
     <title>Ingresar Cliente</title>
 </head>
 <body>
+<a href="/informacion"><button>INFORMACION</button></a>
+<hr>
     <form action="/guardar_informacion" method="post">
         @csrf 
         <label for="nombre">Nombre</label><br>

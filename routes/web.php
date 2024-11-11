@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\ClienteController; //Llamar al controlador
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +20,7 @@ use App\Http\Controllers\ClienteController;
 
 Route::get('/cliente', [ClienteController::class, 'index']); //  /cliente es el nombre de la ruta
 Route::post('/guardar_informacion', [ClienteController::class, 'guardar']);
+Route::get('/informacion', [ClienteController::class, 'informacion']);
+Route::get('/editar/{id}', [ClienteController::class, 'editar']);
+Route::put('/actualizar_Info/{id}', [ClienteController::class, 'actualizar']);
+Route::delete('/eliminar/{id}',[ClienteController::class, 'eliminar']);
