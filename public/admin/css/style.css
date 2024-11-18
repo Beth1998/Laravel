@@ -1,0 +1,15 @@
+.flex-admin{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-admin1{
+    background-color: black;
+    width:20% ;
+    color: white;
+}
+
+.flex-admin2{
+    background-color: blueviolet;
+    width: 80%;
+}

@@ -8,9 +8,9 @@ use App\Models\Cliente; //Llamar al modelo
 class ClienteController extends Controller
 {
     public function index(){
-        $getCliente = Cliente::all(); //Llamar la informacion
+        //$getCliente = Cliente::all(); //Llamar la informacion
         //dd($getCliente);
-        return view('cliente', compact('getCliente')); //Welcome es el nombre de la view que vamos a abrir //compact me permite mandar inf desde el front al back
+        return view('layouts.admin');//, compact('getCliente')); //Welcome es el nombre de la view que vamos a abrir //compact me permite mandar inf desde el front al back
     }
 
     public function guardar(Request $request){
@@ -45,5 +45,9 @@ class ClienteController extends Controller
         $eliminarCliente = Cliente::findOrFail($id);
         $eliminarCliente->delete();
         return redirect()->to('/informacion');
+    }
+
+    public function adminCompu(){
+        return view ('layouts.admin.administracion');
     }
 }

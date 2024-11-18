@@ -24,3 +24,6 @@ Route::get('/informacion', [ClienteController::class, 'informacion']);
 Route::get('/editar/{id}', [ClienteController::class, 'editar']);
 Route::put('/actualizar_Info/{id}', [ClienteController::class, 'actualizar']);
 Route::delete('/eliminar/{id}',[ClienteController::class, 'eliminar']);
+
+//Rutas Administrativas
+Route::get('/adminCompu', [ClienteController::class, '']);
