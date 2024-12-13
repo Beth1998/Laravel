@@ -27,3 +27,7 @@ Route::delete('/eliminar/{id}',[ClienteController::class, 'eliminar']);
 
 //Rutas Administrativas
 Route::get('/adminCompu', [ClienteController::class, '']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home2', [App\Http\Controllers\HomeController::class, 'home'])->name('home2');
